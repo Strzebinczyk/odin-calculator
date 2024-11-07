@@ -76,8 +76,9 @@ equal.addEventListener("click", () => {
   if (numB === undefined) {
     alert("Please enter a number, an operator and another number");
   }
-  display.textContent = operate(numA, op, numB);
-  numA = undefined;
+  result = operate(numA, op, numB);
+  display.textContent = result;
+  numA = result;
   numB = undefined;
   op = undefined;
 });
@@ -86,5 +87,5 @@ clear.addEventListener("click", () => {
   numA = undefined;
   numB = undefined;
   op = undefined;
-  display.textContent = "";
+  display.textContent = "-";
 });
