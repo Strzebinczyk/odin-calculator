@@ -18,7 +18,8 @@ const divide = function (a,b) {
   if(b === 0) {
     alert("Please don't divide by 0")
   } else {
-    return a/b;
+    number = a/b;
+    return Math.round((number + Number.EPSILON) * 10000) / 10000;
   }
 }
 
